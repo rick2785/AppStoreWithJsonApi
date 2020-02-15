@@ -15,7 +15,7 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, U
         let aiv = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
         aiv.color = .darkGray
         aiv.startAnimating()
-        aiv.hidesWhenStopped = false
+        aiv.hidesWhenStopped = true
         return aiv
     }()
     
@@ -110,16 +110,33 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, U
         return true
     }
     
+    var appFullscreenBeginOffset: CGFloat = 0
+    
     @objc fileprivate func handleDrag(gesture: UIPanGestureRecognizer) {
-        let translationY = gesture.translation(in: appFullscreenController.view).y
+        if gesture.state == .began {
+            appFullscreenBeginOffset = appFullscreenController.tableView.contentOffset.y
+        }
         
+        if appFullscreenController.tableView.contentOffset.y > 0 {
+            return
+        }
+        
+        let translationY = gesture.translation(in: appFullscreenController.view).y
         if gesture.state == .changed {
-            let scale = 1 - translationY / 1000
-            
-            let transform: CGAffineTransform = .init(scaleX: scale, y: scale)
-            self.appFullscreenController.view.transform = transform
+            if translationY > 0 {
+                
+                let trueOffset = translationY - appFullscreenBeginOffset
+                var scale = 1 - trueOffset / 1000
+                scale = min(1, scale)
+                scale = max(0.5, scale)
+                
+                let transform: CGAffineTransform = .init(scaleX: scale, y: scale)
+                self.appFullscreenController.view.transform = transform
+            }
         } else if gesture.state == .ended {
-            handleAppFullscreenDismissal()
+            if translationY > 0 {
+                handleAppFullscreenDismissal()
+            }
         }
     }
     
@@ -191,6 +208,7 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, U
             self.tabBarController?.tabBar.transform = .identity
             
             guard let cell = self.appFullscreenController.tableView.cellForRow(at: [0, 0]) as? AppFullscreenHeaderCell else { return }
+            self.appFullscreenController.closeButton.alpha = 0
             cell.todayCell.topConstraint.constant = 24
             cell.layoutIfNeeded()
         }, completion: { _ in
