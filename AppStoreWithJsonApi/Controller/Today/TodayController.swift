@@ -93,9 +93,12 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, U
     }
     
     fileprivate func setupSingleAppFullscreenController(_ indexPath: IndexPath) {
+        navigationController?.navigationBar.isHidden = true
+        
         let appFullscreenController = AppFullScreenController()
         appFullscreenController.todayItem = items[indexPath.row]
         appFullscreenController.dismissHandler = {
+            self.navigationController?.navigationBar.isHidden = false
             self.handleAppFullscreenDismissal()
         }
         appFullscreenController.view.layer.cornerRadius = 16
@@ -133,6 +136,7 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, U
                 let transform: CGAffineTransform = .init(scaleX: scale, y: scale)
                 self.appFullscreenController.view.transform = transform
             }
+            
         } else if gesture.state == .ended {
             if translationY > 0 {
                 handleAppFullscreenDismissal()
@@ -175,6 +179,8 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, U
             
             self.view.layoutIfNeeded() // Starts animation
             
+            self.tabBarController?.tabBar.frame.origin.y = self.view.frame.size.height
+            
             guard let cell = self.appFullscreenController.tableView.cellForRow(at: [0, 0]) as? AppFullscreenHeaderCell else { return }
             cell.todayCell.topConstraint.constant = 48
             cell.layoutIfNeeded()
@@ -205,7 +211,10 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, U
             self.anchoredConstraints?.height?.constant = startingFrame.height
             
             self.view.layoutIfNeeded()
-            self.tabBarController?.tabBar.transform = .identity
+//            self.tabBarController?.tabBar.transform = .identity
+            if let tabBarFrame = self.tabBarController?.tabBar.frame {
+                self.tabBarController?.tabBar.frame.origin.y = self.view.frame.size.height - tabBarFrame.height
+            }
             
             guard let cell = self.appFullscreenController.tableView.cellForRow(at: [0, 0]) as? AppFullscreenHeaderCell else { return }
             self.appFullscreenController.closeButton.alpha = 0

@@ -20,7 +20,7 @@ class AppFullScreenController: UIViewController, UITableViewDataSource, UITableV
         }
         
         let translationY = -90 - UIApplication.shared.statusBarFrame.height
-        let transform = scrollView.contentOffset.y > 100 ? CGAffineTransform(translationX: 0, y: translationY) : .identity
+        let transform = scrollView.contentOffset.y > 0 ? CGAffineTransform(translationX: 0, y: translationY) : .identity
         
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
             self.floatingContainerView.transform = transform
@@ -105,7 +105,7 @@ class AppFullScreenController: UIViewController, UITableViewDataSource, UITableV
     
     fileprivate func setupCloseButton() {
         view.addSubview(closeButton)
-        closeButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 12, left: 0, bottom: 0, right: 0), size: .init(width: 80, height: 40))
+        closeButton.anchor(top: view.topAnchor, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 44, left: 0, bottom: 0, right: 0), size: .init(width: 80, height: 40))
         closeButton.addTarget(self, action: #selector(handleDismiss), for: .touchUpInside)
     }
     

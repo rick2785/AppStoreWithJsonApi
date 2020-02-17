@@ -32,8 +32,8 @@ class TodayCell: BaseTodayCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        [categoryLabel, titleLabel, descriptionLabel].forEach({$0.textColor = .black})
         backgroundColor = .white
-//        clipsToBounds = true
         layer.cornerRadius = 16
 
         imageView.contentMode = .scaleAspectFill
@@ -47,7 +47,7 @@ class TodayCell: BaseTodayCell {
             categoryLabel, titleLabel, imageContainerView, descriptionLabel
         ], spacing: 8)
         addSubview(stackView)
-        stackView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 24, left: 24, bottom: 24, right: 24))
+        stackView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 24, bottom: 24, right: 24))
         self.topConstraint = stackView.topAnchor.constraint(equalTo: topAnchor, constant: 24)
         self.topConstraint.isActive = true
     }

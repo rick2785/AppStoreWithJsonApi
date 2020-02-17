@@ -22,8 +22,8 @@ class MultipleAppCell: UICollectionViewCell {
     
     let nameLabel = UILabel(text: "App Name", font: .systemFont(ofSize: 20))
     let companyLabel = UILabel(text: "Company Name", font: .systemFont(ofSize: 13))
-    
     let getButton = UIButton(title: "GET")
+    
     let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(white: 0.3, alpha: 0.3)
@@ -32,6 +32,7 @@ class MultipleAppCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        [nameLabel, companyLabel].forEach({$0.textColor = .black})
         
         imageView.backgroundColor = .purple
         imageView.constrainWidth(constant: 64)

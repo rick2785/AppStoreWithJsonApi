@@ -17,6 +17,7 @@ class TodayMultipleAppCell: BaseTodayCell {
             
             multipleAppsController.apps = todayItem.apps
             multipleAppsController.collectionView.reloadData()
+            multipleAppsController.collectionView.backgroundColor = .white
         }
     }
     
@@ -27,6 +28,7 @@ class TodayMultipleAppCell: BaseTodayCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        [categoryLabel, titleLabel].forEach({$0.textColor = .black})
         backgroundColor = .white
         layer.cornerRadius = 16
         

@@ -37,12 +37,20 @@ class TodayMultipleAppsController: BaseListController, UICollectionViewDelegateF
         if mode == .fullscreen {
             setupCloseButton()
             navigationController?.isNavigationBarHidden = true
+            navigationController?.navigationBar.isHidden = true
         } else {
             collectionView.isScrollEnabled = false
         }
         
         collectionView.backgroundColor = .white
         collectionView.register(MultipleAppCell.self, forCellWithReuseIdentifier: cellId)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.backgroundColor = .white
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.navigationBar.isHidden = true
     }
     
     override var prefersStatusBarHidden: Bool { return true }

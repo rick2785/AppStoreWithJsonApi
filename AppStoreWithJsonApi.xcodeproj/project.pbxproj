@@ -10,6 +10,9 @@
 		0934FFB323F8100E0082D7B7 /* MusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934FFB223F8100E0082D7B7 /* MusicController.swift */; };
 		0934FFB623F811220082D7B7 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934FFB523F811220082D7B7 /* TrackCell.swift */; };
 		0934FFB823F8143B0082D7B7 /* MusicLoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934FFB723F8143B0082D7B7 /* MusicLoadingFooter.swift */; };
+		0934FFBB23F858FE0082D7B7 /* AppsCompositionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934FFBA23F858FE0082D7B7 /* AppsCompositionalView.swift */; };
+		0934FFBD23F879E50082D7B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0934FFBC23F879E50082D7B7 /* Main.storyboard */; };
+		0934FFBF23F87A840082D7B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934FFBE23F87A830082D7B7 /* ViewController.swift */; };
 		636CFB75911E74E3ED4B3C67 /* Pods_AppStoreWithJsonApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC5B62A4157A5FECE66A388 /* Pods_AppStoreWithJsonApi.framework */; };
 		B77D742923F446C1001A7598 /* TodayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77D742823F446C1001A7598 /* TodayItem.swift */; };
 		B77D742B23F4941A001A7598 /* TodayMultipleAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77D742A23F4941A001A7598 /* TodayMultipleAppCell.swift */; };
@@ -19,7 +22,6 @@
 		B77D743323F5F398001A7598 /* BackEnablesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77D743223F5F398001A7598 /* BackEnablesNavigationController.swift */; };
 		B79DCF2D23E9A1D5008EA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DCF2C23E9A1D5008EA9D5 /* AppDelegate.swift */; };
 		B79DCF2F23E9A1D5008EA9D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DCF2E23E9A1D5008EA9D5 /* SceneDelegate.swift */; };
-		B79DCF3423E9A1D5008EA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79DCF3223E9A1D5008EA9D5 /* Main.storyboard */; };
 		B79DCF3623E9A1D6008EA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79DCF3523E9A1D6008EA9D5 /* Assets.xcassets */; };
 		B79DCF3923E9A1D6008EA9D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79DCF3723E9A1D6008EA9D5 /* LaunchScreen.storyboard */; };
 		B79DCF4123E9A30B008EA9D5 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DCF4023E9A30B008EA9D5 /* BaseTabBarController.swift */; };
@@ -62,6 +64,9 @@
 		0934FFB223F8100E0082D7B7 /* MusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicController.swift; sourceTree = "<group>"; };
 		0934FFB523F811220082D7B7 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		0934FFB723F8143B0082D7B7 /* MusicLoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLoadingFooter.swift; sourceTree = "<group>"; };
+		0934FFBA23F858FE0082D7B7 /* AppsCompositionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCompositionalView.swift; sourceTree = "<group>"; };
+		0934FFBC23F879E50082D7B7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0934FFBE23F87A830082D7B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1248B4FFC37EBA3F1B0C62CC /* Pods-AppStoreWithJsonApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreWithJsonApi.release.xcconfig"; path = "Target Support Files/Pods-AppStoreWithJsonApi/Pods-AppStoreWithJsonApi.release.xcconfig"; sourceTree = "<group>"; };
 		9FC5B62A4157A5FECE66A388 /* Pods_AppStoreWithJsonApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreWithJsonApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77D742823F446C1001A7598 /* TodayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItem.swift; sourceTree = "<group>"; };
@@ -73,7 +78,6 @@
 		B79DCF2923E9A1D5008EA9D5 /* AppStoreWithJsonApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreWithJsonApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79DCF2C23E9A1D5008EA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B79DCF2E23E9A1D5008EA9D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B79DCF3323E9A1D5008EA9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B79DCF3523E9A1D6008EA9D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B79DCF3823E9A1D6008EA9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B79DCF3A23E9A1D6008EA9D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +145,14 @@
 			path = Music;
 			sourceTree = "<group>";
 		};
+		0934FFB923F858E00082D7B7 /* Compositional */ = {
+			isa = PBXGroup;
+			children = (
+				0934FFBA23F858FE0082D7B7 /* AppsCompositionalView.swift */,
+			);
+			path = Compositional;
+			sourceTree = "<group>";
+		};
 		1517A6C262D90D8CCCB95028 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +198,8 @@
 				B79DCF4223EA36FB008EA9D5 /* Controller */,
 				B79DCF2C23E9A1D5008EA9D5 /* AppDelegate.swift */,
 				B79DCF2E23E9A1D5008EA9D5 /* SceneDelegate.swift */,
-				B79DCF3223E9A1D5008EA9D5 /* Main.storyboard */,
+				0934FFBE23F87A830082D7B7 /* ViewController.swift */,
+				0934FFBC23F879E50082D7B7 /* Main.storyboard */,
 				B79DCF3523E9A1D6008EA9D5 /* Assets.xcassets */,
 				B79DCF3723E9A1D6008EA9D5 /* LaunchScreen.storyboard */,
 				B79DCF3A23E9A1D6008EA9D5 /* Info.plist */,
@@ -253,6 +266,7 @@
 		B79DCF5323EBA7BF008EA9D5 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				0934FFB923F858E00082D7B7 /* Compositional */,
 				B7B4BAC323EF5A4E006268DD /* Details */,
 				B79DCF5423EBA7DC008EA9D5 /* AppsPageController.swift */,
 				B79DCF5C23EBAFDF008EA9D5 /* AppsHorizontalController.swift */,
@@ -386,9 +400,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0934FFBD23F879E50082D7B7 /* Main.storyboard in Resources */,
 				B79DCF3923E9A1D6008EA9D5 /* LaunchScreen.storyboard in Resources */,
 				B79DCF3623E9A1D6008EA9D5 /* Assets.xcassets in Resources */,
-				B79DCF3423E9A1D5008EA9D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +459,7 @@
 				B7B4BAC223EF50D5006268DD /* BetterSnappingLayout.swift in Sources */,
 				B79DCF2D23E9A1D5008EA9D5 /* AppDelegate.swift in Sources */,
 				B7B4BAD223F18609006268DD /* ReviewCell.swift in Sources */,
+				0934FFBB23F858FE0082D7B7 /* AppsCompositionalView.swift in Sources */,
 				B7B4BABE23EF3ACF006268DD /* SocialApp.swift in Sources */,
 				0934FFB823F8143B0082D7B7 /* MusicLoadingFooter.swift in Sources */,
 				B79DCF4F23EAFDAE008EA9D5 /* SearchResult.swift in Sources */,
@@ -470,6 +485,7 @@
 				B79DCF5223EB8F25008EA9D5 /* Service.swift in Sources */,
 				B7B4BACA23F0CB1E006268DD /* PreviewCell.swift in Sources */,
 				B7B4BAD023F18480006268DD /* ReviewsController.swift in Sources */,
+				0934FFBF23F87A840082D7B7 /* ViewController.swift in Sources */,
 				B7B4BAD423F18D10006268DD /* Reviews.swift in Sources */,
 				B7B4BAD723F27F0D006268DD /* TodayController.swift in Sources */,
 				B7B4BAB423EEF760006268DD /* Extensions.swift in Sources */,
@@ -491,14 +507,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B79DCF3223E9A1D5008EA9D5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B79DCF3323E9A1D5008EA9D5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B79DCF3723E9A1D6008EA9D5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -632,6 +640,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XC48HTB69A;
 				INFOPLIST_FILE = AppStoreWithJsonApi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,6 +660,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XC48HTB69A;
 				INFOPLIST_FILE = AppStoreWithJsonApi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
